@@ -14,6 +14,10 @@ io.on('connection', function(socket) {
 	socket.on('disconnect', function() {
 		console.log('user disconnected');
 	});
+
+	socket.on('status', function(data) {
+		console.log("yeah I'm here: " + data);
+	});
 });
 
 http.listen(app.get('port'), function() {
